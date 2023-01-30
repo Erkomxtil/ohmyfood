@@ -5,6 +5,12 @@
   font-family: "Roboto", sans-serif;
 }
 
+h1,
+h2,
+p {
+  font-size: unset;
+}
+
 /*
 font-family: 'Shrikhand', cursive;
 */
@@ -12,7 +18,6 @@ font-family: 'Shrikhand', cursive;
 header {
   display: flex;
   justify-content: center;
-  box-shadow: -1px 10px 14px -7px rgba(0, 0, 0, 0.55);
 }
 header picture {
   max-width: 170px;
@@ -21,4 +26,87 @@ header picture img {
   display: block;
   width: 100%;
   margin: 30px 0 12px 0;
+}
+
+.town {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 10px 13px -15px rgba(0, 0, 0, 0.4);
+  padding: 16px 20px 20px 20px;
+}
+.town i {
+  margin-right: 18px;
+}
+
+.book {
+  font-size: 1rem;
+  padding: 44px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+.book h1 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.book p {
+  margin-bottom: 26px;
+}
+.book button {
+  border: none;
+  padding: 18px 23px 16px 23px;
+  border-radius: 23px;
+  background: linear-gradient(#ff79da, #9356DC);
+  color: #ffffff;
+  font-size: 0.75rem;
+}
+
+.manual {
+  padding: 48px 20px 70px 20px;
+  font-size: 1.25rem;
+}
+.manual h2 {
+  margin-bottom: 34px;
+}
+.manual .step-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.manual .step-wrapper .step-card i {
+  color: #7e7e7e;
+  font-size: 22px;
+  margin-right: 28px;
+}
+.manual .step-wrapper .step-card p {
+  padding: 30px 0;
+  background-color: #f7f7f7;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: 0px 0px 6px -14px #000000, 0px 9px 9px -4px rgba(0, 0, 0, 0.13);
+  position: relative;
+  margin-bottom: 20px;
+}
+.manual .step-wrapper .step-card p span {
+  position: absolute;
+  color: #ffffff;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #9356DC;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+}
+.manual .step-wrapper .step-card.active i {
+  color: #9356DC;
+}
+.manual .step-wrapper .step-card.active p {
+  background-color: #f5edff;
 }/*# sourceMappingURL=style.css.map */
