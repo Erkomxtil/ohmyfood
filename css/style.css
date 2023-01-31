@@ -109,4 +109,78 @@ header picture img {
 }
 .manual .step-wrapper .step-card.active p {
   background-color: #f5edff;
+}
+
+.restaurant {
+  background-color: #f7f7f7;
+  padding: 60px 20px 60px 20px;
+}
+.restaurant h2 {
+  margin-bottom: 30px;
+}
+.restaurant .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurant .card-wrapper .restaurant-card {
+  border-radius: 23px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6px -14px #000000, 0px 9px 9px -4px rgba(0, 0, 0, 0.13);
+}
+.restaurant .card-wrapper .restaurant-card figure {
+  position: relative;
+}
+.restaurant .card-wrapper .restaurant-card figure img {
+  height: 174px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+}
+.restaurant .card-wrapper .restaurant-card figure figcaption {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background-color: #99e2d0;
+  color: #008766;
+  padding: 10px 12px;
+  border-radius: 2px;
+}
+.restaurant .card-wrapper .restaurant-card .text-card span {
+  font-weight: bold;
+}
+.restaurant .card-wrapper .restaurant-card .text-card p {
+  position: relative;
+  padding: 20px 15px 20px 15px;
+  line-height: 22px;
+}
+.restaurant .card-wrapper .restaurant-card .text-card p i {
+  position: absolute;
+  right: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+footer {
+  background-color: #353535;
+  padding: 28px 20px 36px 20px;
+  color: #ffffff;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1rem;
+  margin-bottom: 22px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 12px;
+}
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
