@@ -1,4 +1,15 @@
-.la-palette {
+header {
+  position: relative;
+
+  a {
+    position: absolute;
+    left: 5.86%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.menus {
   .main-picture {
     img {
       height: 260px;
