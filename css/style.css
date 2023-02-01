@@ -1,3 +1,154 @@
+header {
+  position: relative;
+}
+header a {
+  position: absolute;
+  left: 5.86%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.la-palette .main-picture img {
+  height: 260px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.la-palette .title {
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 100;
+  margin-top: -40px;
+  padding: 24px 14px 20px 14px;
+}
+.la-palette .title h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.25rem;
+  margin-bottom: 35px;
+  position: relative;
+  display: inline-block;
+}
+.la-palette .title h1 i {
+  margin-left: 34px;
+}
+.la-palette .title h1 .heart-wrapper {
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 0;
+}
+.la-palette .title h1 .heart-wrapper i {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  transform: translateY(50%);
+}
+.la-palette .title h1 .heart-wrapper i.fa-solid::before {
+  display: block;
+  font-size: 0;
+  transition: all 0.3s linear 0s;
+  top: 15px;
+  left: 4px;
+  position: absolute;
+}
+.la-palette .title h1 .heart-wrapper:hover > i.fa-solid::before {
+  color: #9356DC;
+  font-size: 20px;
+  display: block;
+  left: 0;
+  top: 10px;
+}
+.la-palette .title h2 {
+  position: relative;
+  font-weight: normal;
+}
+.la-palette .title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+}
+.la-palette .title.first {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding-top: 34px;
+}
+.la-palette .card-menu {
+  background-color: #f7f7f7;
+  padding: 12px 14px 50px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.la-palette .card-menu .card-menu-wrapper {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
+}
+.la-palette .card-menu .card-menu-wrapper .card-menu-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.la-palette .card-menu .card-menu-wrapper .card-menu-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 12px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.la-palette .card-menu .card-menu-wrapper .card-menu-price {
+  margin-right: -68px;
+  transition: all 0.5s linear;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.la-palette .card-menu .card-menu-wrapper .card-menu-price span {
+  display: inline-block;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  font-weight: bold;
+}
+.la-palette .card-menu .card-menu-wrapper .card-menu-price i {
+  color: #ffffff;
+  background-color: #99E2D0;
+  padding: 24px;
+  font-size: 20px;
+}
+.la-palette .card-menu .card-menu-wrapper .card-menu-price i::before {
+  transform: rotate(0deg);
+  transition: all 0.5s linear;
+  display: inline-block;
+}
+.la-palette .card-menu .card-menu-wrapper:hover > .card-menu-price {
+  margin-right: 0px;
+}
+.la-palette .card-menu .card-menu-wrapper:hover > .card-menu-price i::before {
+  display: inline-block;
+  transform: rotate(360deg);
+}
+.la-palette .card-menu.last {
+  padding-bottom: 40px;
+}
+.la-palette .cta {
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding-bottom: 40px;
+}
+.la-palette .cta button {
+  padding: 18px 62px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +166,34 @@ p {
 font-family: 'Shrikhand', cursive;
 */
 /* variables */
+/* Common */
+button {
+  border: none;
+  padding: 18px 23px 16px 23px;
+  border-radius: 23px;
+  background: linear-gradient(#ff79da, #9356DC);
+  color: #ffffff;
+  font-size: 0.75rem;
+  box-shadow: 0px 0px 6px -14px #000000, 0px 9px 9px -4px rgba(0, 0, 0, 0.13);
+}
+button:hover {
+  filter: brightness(1.5);
+  box-shadow: 0px 0px 6px -14px #000000, 0px 9px 9px -4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+/* Landing page */
 header {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+header a {
+  position: absolute;
+  left: 5.86%;
+  top: 42px;
+  transform: translateY(-50%);
+  color: #000000;
 }
 header picture {
   max-width: 170px;
@@ -52,14 +228,6 @@ header picture img {
 }
 .book p {
   margin-bottom: 26px;
-}
-.book button {
-  border: none;
-  padding: 18px 23px 16px 23px;
-  border-radius: 23px;
-  background: linear-gradient(#ff79da, #9356DC);
-  color: #ffffff;
-  font-size: 0.75rem;
 }
 
 .manual {
@@ -123,6 +291,10 @@ header picture img {
   flex-direction: column;
   gap: 18px;
 }
+.restaurant .card-wrapper a {
+  color: #000000;
+  text-decoration: none;
+}
 .restaurant .card-wrapper .restaurant-card {
   border-radius: 23px;
   background-color: #ffffff;
@@ -149,19 +321,41 @@ header picture img {
   padding: 10px 12px;
   border-radius: 2px;
 }
+.restaurant .card-wrapper .restaurant-card .text-card {
+  position: relative;
+}
 .restaurant .card-wrapper .restaurant-card .text-card span {
   font-weight: bold;
 }
 .restaurant .card-wrapper .restaurant-card .text-card p {
-  position: relative;
   padding: 20px 15px 20px 15px;
   line-height: 22px;
 }
-.restaurant .card-wrapper .restaurant-card .text-card p i {
+.restaurant .card-wrapper .restaurant-card .text-card .heart-wrapper {
   position: absolute;
+  top: calc(50% - 20px);
   right: 26px;
-  top: 50%;
-  transform: translateY(-50%);
+}
+.restaurant .card-wrapper .restaurant-card .text-card .heart-wrapper i {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  transform: translateY(50%);
+}
+.restaurant .card-wrapper .restaurant-card .text-card .heart-wrapper i.fa-solid::before {
+  display: block;
+  font-size: 0;
+  transition: all 0.3s linear 0s;
+  top: 15px;
+  left: 4px;
+  position: absolute;
+}
+.restaurant .card-wrapper .restaurant-card .text-card .heart-wrapper:hover > i.fa-solid::before {
+  color: #9356DC;
+  font-size: 16px;
+  display: block;
+  left: 0;
+  top: 8px;
 }
 
 footer {

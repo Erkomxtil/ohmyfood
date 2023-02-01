@@ -1,3 +1,5 @@
+@import '_a-la-francaise';
+@import '_la-palette';
 * {
   margin: 0;
   padding: 0;
@@ -20,10 +22,37 @@ $purple: #9356DC;
 $pink: #ff79da;
 $lightgreen: #99e2d0;
 
+/* Common */
+button {
+  border: none;
+  padding: 18px 23px 16px 23px;
+  border-radius: 23px;
+  background: linear-gradient($pink, $purple);
+  color: #ffffff;
+  font-size: 0.75rem;
+  box-shadow: 0px 0px 6px -14px #000000, 0px 9px 9px -4px rgb(0 0 0 / 13%);
 
+  &:hover {
+    filter: brightness(1.5);
+    box-shadow: 0px 0px 6px -14px #000000, 0px 9px 9px -4px rgb(0 0 0 / 0.4);
+    cursor: pointer;
+
+  }
+}
+
+/* Landing page */
 header {
   display: flex;
   justify-content: center;
+  position: relative;
+
+  a {
+    position: absolute;
+    left: 5.86%;
+    top: 42px;
+    transform: translateY(-50%);
+    color: #000000;
+  }
 
   picture {
     max-width: 170px;
@@ -62,15 +91,6 @@ header {
 
   p {
     margin-bottom: 26px;
-  }
-
-  button {
-    border: none;
-    padding: 18px 23px 16px 23px;
-    border-radius: 23px;
-    background: linear-gradient($pink, $purple);
-    color: #ffffff;
-    font-size: 0.75rem;
   }
 }
 
@@ -147,10 +167,17 @@ header {
     display: flex;
     flex-direction: column;
     gap: 18px;
+
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+
     .restaurant-card {
       border-radius: 23px;
       background-color: #ffffff;
       box-shadow: 0px 0px 6px -14px #000000, 0px 9px 9px -4px rgb(0 0 0 / 13%);
+
   
       figure {
         position: relative;
@@ -176,21 +203,43 @@ header {
       }
   
       .text-card {
-        
+        position: relative;
         span {
           font-weight: bold;
         }
         
         p {
-          position: relative;
           padding: 20px 15px 20px 15px;
           line-height: 22px;
-  
+        }
+
+        .heart-wrapper {
+          position: absolute;
+          top: calc(50% - 20px);
+          right: 26px;
+
           i {
             position: absolute;
-            right: 26px;
-            top: 50%;
-            transform: translateY(-50%);
+            top:-50%;
+            left: 0;
+            transform: translateY(50%);
+
+            &.fa-solid::before {
+              display: block;
+              font-size: 0;
+              transition: all 0.3s linear 0s;
+              top: 15px;
+              left: 4px;
+              position: absolute;
+            }
+          }
+          
+          &:hover > i.fa-solid::before {
+            color: $purple;
+            font-size: 16px;
+            display: block;
+            left: 0;
+            top: 8px;
           }
         }
       }
