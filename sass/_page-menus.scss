@@ -69,9 +69,27 @@ header {
       }
     }
 
+    &.first {
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      padding-top: 34px;
+    }
+  }
+
+  .all-menus {
+    background-color: $lightgrey;
+  }
+  .card-menu {
+    background-color: #f7f7f7;
+    padding: 12px 14px 50px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
     h2 {
       position: relative;
       font-weight: normal;
+      margin-bottom: 18px;
 
       &::after {
         content: "";
@@ -83,20 +101,6 @@ header {
         background-color: #99E2D0;
       }
     }
-
-    &.first {
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      padding-top: 34px;
-    }
-  }
-
-  .card-menu {
-    background-color: #f7f7f7;
-    padding: 12px 14px 50px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
 
     .card-menu-wrapper {
       background-color: #ffffff;

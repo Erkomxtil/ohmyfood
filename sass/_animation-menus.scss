@@ -1,0 +1,135 @@
+@import '_variables';
+
+/* Spinner */
+.spinner {
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  animation: block-spinner 3s linear 0s 1 forwards;
+
+  i.spin1::before,
+  i.spin3::before {
+    display: inline-block;
+    animation: spinner-rotation 2s linear 0s infinite;
+  }
+
+  i.spin2::before {
+    display: inline-block;
+    animation: spinner-rotation 2s linear 0s infinite reverse;
+  }
+
+  .spinner-wrapper {
+    position: relative;
+  }
+
+  .spin1 {
+    color: $purple;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+
+  .spin2 {
+    color: $pink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+  }
+
+  .spin3 {
+    color: $lightgreen;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 160px;
+  }
+
+  .spinner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 20px;
+    animation: change-color-text 2s linear 0s infinite;
+    margin-top: 120px;
+  }
+}
+
+@keyframes block-spinner {
+  from {
+    opacity: 100%;
+  }  
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+
+@keyframes spinner-rotation {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes change-color-text {
+  0% {
+    color: $purple;
+  }
+  33% {
+    color: $pink;
+  }
+  66% {
+    color: $lightgreen;
+  }
+  100% {
+    color: $purple;
+  }
+}
+
+
+/* Menus */
+.card-menu-wrapper {
+  opacity: 0;
+  &:nth-child(2) {
+    animation: move-card .6s linear forwards;
+  }
+  &:nth-child(3) {
+    animation: move-card .6s linear .6s forwards;
+  }
+  &:nth-child(4) {
+    animation: move-card .6s linear 1.2s forwards;
+    background-color: red;
+  }
+  &:nth-child(5) {
+    animation: move-card .6s linear 1.8s forwards;
+  }
+}
+
+@keyframes move-card {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    
+  }to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
