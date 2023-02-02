@@ -14,6 +14,16 @@
   font-size: 100px;
   animation: block-spinner 3s linear 0s 1 forwards;
 
+  .animation-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-family: 'Shrikhand', cursive;
+    margin-bottom: 100px;
+  }
+
   i.spin1::before,
   i.spin3::before {
     display: inline-block;
@@ -65,6 +75,7 @@
     font-size: 20px;
     animation: change-color-text 2s linear 0s infinite;
     margin-top: 120px;
+    text-align: center;
   }
 }
 

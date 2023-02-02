@@ -372,6 +372,14 @@ header a {
   -webkit-animation: block-spinner 3s linear 0s 1 forwards;
           animation: block-spinner 3s linear 0s 1 forwards;
 }
+.spinner .animation-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.spinner h2 {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 100px;
+}
 .spinner i.spin1::before,
 .spinner i.spin3::before {
   display: inline-block;
@@ -418,6 +426,7 @@ header a {
   -webkit-animation: change-color-text 2s linear 0s infinite;
           animation: change-color-text 2s linear 0s infinite;
   margin-top: 120px;
+  text-align: center;
 }
 
 @-webkit-keyframes block-spinner {
