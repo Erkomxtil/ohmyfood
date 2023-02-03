@@ -554,7 +554,7 @@ header a {
     height: 500px;
   }
   .manual .step-wrapper,
-.restaurant .card-wrapper,
+.restaurant-wrapper,
 .all-menus {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
