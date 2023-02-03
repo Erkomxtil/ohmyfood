@@ -1,5 +1,3 @@
-/* variables */
-/* variables */
 /* Landing page */
 header {
   display: flex;
@@ -357,7 +355,6 @@ header a {
   padding: 18px 62px;
 }
 
-/* variables */
 /* Spinner */
 .spinner {
   background: white;
