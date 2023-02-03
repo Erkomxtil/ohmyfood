@@ -79,6 +79,7 @@ header {
   .all-menus {
     background-color: $lightgrey;
   }
+
   .card-menu {
     background-color: #f7f7f7;
     padding: 12px 14px 50px 14px;
@@ -91,18 +92,18 @@ header {
       font-weight: normal;
       margin-bottom: 18px;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        height: 3px;
-        width: 40px;
-        background-color: #99E2D0;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      height: 3px;
+      width: 40px;
+      background-color: #99E2D0;
     }
+  }
 
-    .card-menu-wrapper {
+    &__wrapper {
       background-color: #ffffff;
       display: flex;
       justify-content: space-between;
@@ -110,56 +111,57 @@ header {
       overflow: hidden;
       border-radius: 14px;
       box-shadow: 0px 0px 9px 2px rgb(0 0 0 / 0.2);
-
-      .card-menu-text {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        p {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          padding-left: 12px;
-          font-size: 0.875rem;
-          line-height: 1.25rem;
-        }
-      }
-
-      .card-menu-price {
-        margin-right: -68px;
-        transition: all .5s linear;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-
-        span {
-          display: inline-block;
-          padding-right: 24px;
-          padding-bottom: 16px;
-          font-weight: bold;
-        }
-
-        i {
-          color: #ffffff;
-          background-color: #99E2D0;
-          padding: 24px;
-          font-size: 20px;
-
-          &::before {
-            transform: rotate(0deg);
-            transition: all 0.5s linear;
-            display: inline-block;
-          }
-        }
-      }
-
-      &:hover > .card-menu-price {
+    
+      &:hover > .card-menu__price {
         margin-right: 0px;
       }
 
-      &:hover > .card-menu-price i::before {
+      &:hover > .card-menu__price i::before {
         display: inline-block;
         transform: rotate(360deg);
+      }
+
+    }
+
+    &__text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 12px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    &__price {
+      margin-right: -68px;
+      transition: all .5s linear;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      span {
+        display: inline-block;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        font-weight: bold;
+      }
+
+      i {
+        color: #ffffff;
+        background-color: #99E2D0;
+        padding: 24px;
+        font-size: 20px;
+
+        &::before {
+          transform: rotate(0deg);
+          transition: all 0.5s linear;
+          display: inline-block;
+        }
       }
     }
 

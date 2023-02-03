@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" type="image/png" href="images/logo/favicon.png"/>
   <title>Oh my food - </title>
 </head>
@@ -20,7 +20,7 @@
     </picture>
   </header>
   <main>
-    <p class="town">
+    <p class="place">
       <span>
         <i class="fa-solid fa-location-dot"></i>Paris, Belleville
       </span>
@@ -33,21 +33,21 @@
     <section class="manual">
       <h2>Fonctionnement</h2>
       <div class="step-wrapper">
-        <div class="step-card">
+        <div class="step-wrapper__card">
           <p>
-            <span class="step-number">1</span>
+            <span class="step-wrapper__number">1</span>
             <i class="fa-solid fa-mobile-screen-button"></i> Choississez un restaurant
           </p>
         </div>
-        <div class="step-card">
+        <div class="step-wrapper__card">
           <p>
-            <span class="step-number">2</span>
+            <span class="step-wrapper__number">2</span>
             <i class="fa-solid fa-list-ul"></i> Composez votre menu
           </p>
         </div>
-        <div class="step-card active">
+        <div class="step-wrapper__card step-wrapper__card--active">
           <p>
-            <span class="step-number">3</span>
+            <span class="step-wrapper__number">3</span>
             <i class="fa-solid fa-store"></i> Dégustez au restaurant
           </p>
         </div>
@@ -55,68 +55,68 @@
     </section>
     <section class="restaurant">
       <h2>Restaurant</h2>
-      <div class="card-wrapper">
+      <div class="restaurant-wrapper">
         <a href="la-palette.html">
-          <div class="restaurant-card">
+          <div class="restaurant-wrapper__card">
             <figure>
               <img src="images/restaurants/la-palette.jpg" alt="Assiette avec un plat">
               <figcaption>Nouveau</figcaption>
             </figure>
-            <div class="text-card">
+            <div class="restaurant-wrapper__text">
               <p>
                 <span>La palette du goût</span><br>
                 Ménilmontant
               </p>
-              <div class="heart-wrapper">
+              <div class="restaurant-wrapper__heart">
                 <i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i>
               </div>
             </div>
           </div>
         </a>
         <a href="la-note.html">
-          <div class="restaurant-card">
+          <div class="restaurant-wrapper__card">
             <figure>
               <img src="images/restaurants/la-note.jpg" alt="Assiette avec un plat">
               <figcaption>Nouveau</figcaption>
             </figure>
-            <div class="text-card">
+            <div class="restaurant-wrapper__text">
               <p>
                 <span>La note enchantée</span><br>
                 Charonne
               </p>
-              <div class="heart-wrapper">
+              <div class="restaurant-wrapper__heart">
                 <i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i>
               </div>
             </div>
           </div>
         </a>
         <a href="a-la-francaise.html">
-          <div class="restaurant-card">
+          <div class="restaurant-wrapper__card">
             <figure>
               <img src="images/restaurants/la-francaise.jpg" alt="Assiette avec un plat">
             </figure>
-            <div class="text-card">
+            <div class="restaurant-wrapper__text">
               <p>
                 <span>À la française</span><br>
                 Cité Rouge
               </p>
-              <div class="heart-wrapper">
+              <div class="restaurant-wrapper__heart">
                 <i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i>
               </div>
             </div>
           </div>
         </a>
         <a href="le-delice.html">
-          <div class="restaurant-card">
+          <div class="restaurant-wrapper__card">
             <figure>
               <img src="images/restaurants/le-delice.jpg" alt="Assiette avec un plat">
             </figure>
-            <div class="text-card">
+            <div class="restaurant-wrapper__text">
               <p>
                 <span>Le délice des sens</span><br>
                 Folie-Méricourt            
               </p>
-              <div class="heart-wrapper">
+              <div class="restaurant-wrapper__heart">
                 <i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i>
               </div>
             </div>
@@ -153,12 +153,12 @@
     </nav>
   </footer>
   <div class="spinner">
-    <div class="animation-wrapper">
+    <div class="spinner__animation-wrapper">
       <h2>Ohmyfood</h2>
-      <div class="spinner-wrapper">
-        <i class="fa-sharp fa-solid fa-spinner spin1"></i>
-        <i class="fa-sharp fa-solid fa-spinner spin2"></i>
-        <i class="fa-sharp fa-solid fa-spinner spin3"></i>
+      <div class="spinner__animation-icons">
+        <i class="fa-sharp fa-solid fa-spinner spinner__animation-spin1"></i>
+        <i class="fa-sharp fa-solid fa-spinner spinner__animation-spin2"></i>
+        <i class="fa-sharp fa-solid fa-spinner spinner__animation-spin3"></i>
       </div>
       <p>
         Loading...

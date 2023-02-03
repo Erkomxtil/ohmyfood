@@ -1,5 +1,6 @@
+@import '_mixins';
 @media (min-width: 700px) {
-  .town {
+  .place {
     background: url(../images/map/map.jpg) 28% 58% no-repeat;
     height: 500px;
 
@@ -15,16 +16,8 @@
   }
 
   .manual .step-wrapper,
-  .restaurant .card-wrapper {
-    display: grid;
-    flex-direction: unset;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    column-gap: 2rem;
-  }
-
+  .restaurant .card-wrapper,
   .all-menus {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    column-gap: 2rem;
+    @include grid-responsive;
   }
 }

@@ -1,4 +1,5 @@
 @import '_variables';
+@import '_mixins';
 
 /* Spinner */
 .spinner {
@@ -14,55 +15,48 @@
   font-size: 100px;
   animation: block-spinner 3s linear 0s 1 forwards;
 
-  .animation-wrapper {
+  .spinner__animation-wrapper {
     display: flex;
     flex-direction: column;
+
+    h2 {
+      font-family: 'Shrikhand', cursive;
+      margin-bottom: 100px;
+      font-size: 3rem;
+    }
   }
 
-  h2 {
-    font-family: 'Shrikhand', cursive;
-    margin-bottom: 100px;
-  }
 
-  i.spin1::before,
-  i.spin3::before {
+  i.spinner__animation-spin1::before,
+  i.spinner__animation-spin3::before {
     display: inline-block;
     animation: spinner-rotation 2s linear 0s infinite;
   }
 
-  i.spin2::before {
+  i.spinner__animation-spin2::before {
     display: inline-block;
     animation: spinner-rotation 2s linear 0s infinite reverse;
   }
 
-  .spinner-wrapper {
+  .spinner__animation-icons {
     position: relative;
   }
 
-  .spin1 {
+  .spinner__animation-spin1 {
+    @include spin;
     color: $purple;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 40px;
   }
 
-  .spin2 {
+  .spinner__animation-spin2 {
+    @include spin;
     color: $pink;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 80px;
   }
 
-  .spin3 {
+  .spinner__animation-spin3 {
+    @include spin;    
     color: $lightgreen;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 160px;
   }
 
@@ -117,27 +111,26 @@
 
 
 /* Menus */
-.card-menu-wrapper {
+.card-menu__wrapper {
   opacity: 0;
   &:nth-child(2) {
-    animation: move-card .6s linear forwards;
+    animation: move-card .3s linear forwards;
   }
   &:nth-child(3) {
-    animation: move-card .6s linear .6s forwards;
+    animation: move-card .3s linear .3s forwards;
   }
   &:nth-child(4) {
-    animation: move-card .6s linear 1.2s forwards;
-    background-color: red;
+    animation: move-card .3s linear .6s forwards;
   }
   &:nth-child(5) {
-    animation: move-card .6s linear 1.8s forwards;
+    animation: move-card .3s linear .9s forwards;
   }
 }
 
 @keyframes move-card {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
     
   }to {
     opacity: 1;

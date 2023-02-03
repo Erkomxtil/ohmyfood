@@ -1,3 +1,4 @@
+@import '_variables';
 @import '_landing-page';
 @import '_page-menus';
 @import '_animation-menus';
@@ -28,9 +29,6 @@ button {
   box-shadow: 0px 0px 6px -14px $black, 0px 9px 9px -4px rgb(0 0 0 / 13%);
 
   &:hover {
-    filter: brightness(1.1);
-    box-shadow: 0px 0px 6px -14px $black, 0px 9px 9px -4px rgb(0 0 0 / 0.4);
-    cursor: pointer;
-
+    @include over-button;
   }
 }
